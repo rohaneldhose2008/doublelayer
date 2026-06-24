@@ -552,7 +552,7 @@ section.flipped-prev {
   height: 100vh;
   z-index: 1; /* stacks in front of body background, but behind grain and content */
   overflow: hidden;
-  background-image: url('../images/hero_bg.jpeg');
+  background-image: url('../images/hero_bg.jpeg?v=3.8');
   background-size: cover;
   background-position: center 15%;
   background-repeat: no-repeat;
@@ -565,7 +565,7 @@ section.flipped-prev {
   .hero-bg-image-wrap {
     /* If you place a portrait image named hero_bg_mobile.jpeg in the images/ folder, 
        it will load here automatically on mobile screens. Otherwise, it falls back to the centered desktop image. */
-    background-image: url('../images/hero_bg_mobile.jpeg'), url('../images/hero_bg.jpeg');
+    background-image: url('../images/hero_bg_mobile.jpeg?v=3.8'), url('../images/hero_bg.jpeg?v=3.8');
     background-position: center 15%;
   }
 }
