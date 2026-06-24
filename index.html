@@ -395,11 +395,11 @@
               <p class="pack-info pack-customizable">(This package is customizable)</p>
             </div>
             <ul class="pack-details">
-              <li><i data-lucide="check"></i> 2 Professional Photographers</li>
-              <li><i data-lucide="check"></i> Candid &amp; Traditional Coverage</li>
-              <li><i data-lucide="check"></i> 100+ High-Res Retouched Images</li>
-              <li><i data-lucide="check"></i> High-Definition Teaser Clip (3-min)</li>
-              <li><i data-lucide="check"></i> Private Online Gallery (1-Year Access)</li>
+              <li><i data-lucide="camera"></i> <strong>Eve &amp; Day Crew:</strong> 1 Function Photo + 1 Cinema</li>
+              <li><i data-lucide="book-open"></i> <strong>Optional Album:</strong> 20 to 30 Leaves (Bag &amp; Box)</li>
+              <li><i data-lucide="film"></i> <strong>Film:</strong> Full Length HD Film in Pendrive</li>
+              <li><i data-lucide="video"></i> <strong>Teaser:</strong> Wedding Highlight (2-6 mins)</li>
+              <li><i data-lucide="gift"></i> <strong>Complimentary:</strong> Wall Calendar, Photo Frames</li>
             </ul>
             <div class="pack-footer">
               <button class="btn btn-glass" onclick="selectPackageAndGo('silver')">Choose Silver</button>
@@ -415,33 +415,35 @@
               <p class="pack-info pack-customizable">(This package is customizable)</p>
             </div>
             <ul class="pack-details">
-              <li><i data-lucide="check"></i> 4 Crew Members (Photo &amp; Cinema)</li>
-              <li><i data-lucide="check"></i> 1 Premium Designed Flush-Mount Album</li>
-              <li><i data-lucide="check"></i> 200+ High-Res Retouched Images</li>
-              <li><i data-lucide="check"></i> 4K Cinematic Highlight Film + Trailer</li>
-              <li><i data-lucide="check"></i> Private Online Gallery (3-Year Access)</li>
+              <li><i data-lucide="camera"></i> <strong>Coverage:</strong> Eve &amp; Day Crew (1 Photo + 1 Cinema)</li>
+              <li><i data-lucide="users"></i> <strong>Engagement:</strong> 1 Photo + 1 Cinema + Pre-Wedding Photo</li>
+              <li><i data-lucide="book-open"></i> <strong>Optional Album:</strong> 50 to 70 Leaves Premium Luster</li>
+              <li><i data-lucide="film"></i> <strong>Film:</strong> Full HD Film + Engagement &amp; Wedding Highlights</li>
+              <li><i data-lucide="sparkles"></i> <strong>Same Day:</strong> 30 Colour Graded Photos + Mini Album</li>
+              <li><i data-lucide="gift"></i> <strong>Complimentary:</strong> Pre/Post Shoot, Calendar, Frames</li>
             </ul>
             <div class="pack-footer">
               <button class="btn btn-primary" onclick="selectPackageAndGo('gold')">Choose Gold</button>
             </div>
           </div>
 
-          <!-- Platinum Tier -->
-          <div class="glass-card package-card-v2" id="tier-platinum" data-number="03">
-            <div class="package-accent-bar platinum"></div>
+          <!-- Diamond Tier -->
+          <div class="glass-card package-card-v2" id="tier-diamond" data-number="03">
+            <div class="package-accent-bar diamond"></div>
             <div class="pack-head">
-              <h3 class="pack-price pack-price-platinum">Platinum</h3>
+              <h3 class="pack-price pack-price-diamond">Diamond</h3>
               <p class="pack-info pack-customizable">(This package is customizable)</p>
             </div>
             <ul class="pack-details">
-              <li><i data-lucide="check"></i> 6 Crew Members (Photo, Cinema, Drone)</li>
-              <li><i data-lucide="check"></i> 2 Premium Leather-Bound Print Albums</li>
-              <li><i data-lucide="check"></i> Unlimited High-Res Retouched Images</li>
-              <li><i data-lucide="check"></i> Full 4K Feature Film + Drone Cinema</li>
-              <li><i data-lucide="check"></i> AI Face-Detection Guest Image Portal (QR)</li>
+              <li><i data-lucide="camera"></i> <strong>Coverage:</strong> Day Crew (2 Photo + 2 Cinema + Helicam)</li>
+              <li><i data-lucide="users"></i> <strong>Eve &amp; Engagement:</strong> Split Eve (Groom/Bride) &amp; 4-Crew Engagement</li>
+              <li><i data-lucide="book-open"></i> <strong>Optional Album:</strong> 80 to 100 Leaves Premium Luster</li>
+              <li><i data-lucide="film"></i> <strong>Film:</strong> Full HD Film + Engagement &amp; Wedding Highlights</li>
+              <li><i data-lucide="sparkles"></i> <strong>Same Day:</strong> 60 Colour Graded Photos + Mini Album</li>
+              <li><i data-lucide="gift"></i> <strong>Complimentary:</strong> Pre/Post Shoot, Calendars, Frames</li>
             </ul>
             <div class="pack-footer">
-              <button class="btn btn-glass" onclick="selectPackageAndGo('platinum')">Choose Platinum</button>
+              <button class="btn btn-glass" onclick="selectPackageAndGo('diamond')">Choose Diamond</button>
             </div>
           </div>
 
@@ -463,8 +465,8 @@
                 <li><i data-lucide="check"></i> 100 Edited Highlight Images</li>
                 <li><i data-lucide="video"></i> 3-Min Cinematic Teaser Reel</li>
                 <li><i data-lucide="film"></i> Full Event continuous video recording</li>
-                <li><i data-lucide="globe"></i> 3-Year Private Online Gallery access</li>
-                <li><i data-lucide="usb"></i> USB Keepsake Box</li>
+                <li><i data-lucide="instagram"></i> Instagram &amp; WhatsApp Reels</li>
+                <li><i data-lucide="book-open"></i> Optional Parent / Mini Album</li>
               </ul>
             </div>
             
@@ -704,7 +706,7 @@
                 <select id="booking-service" required class="input-field select-field">
                   <option value="silver">Silver Package (Essential)</option>
                   <option value="gold">Gold Package (Recommended)</option>
-                  <option value="platinum">Platinum Package (Luxury Cinematic)</option>
+                  <option value="diamond">Diamond Package (Luxury Cinematic)</option>
                   <option value="custom">Custom Configuration</option>
                 </select>
               </div>
@@ -1168,19 +1170,19 @@
                 </div>
               </label>
 
-              <label class="addon-selection-card" id="card-add-usbKeepsake">
-                <input type="checkbox" id="add-usbKeepsake" onchange="toggleCustomizerAddon('usbKeepsake')">
+              <label class="addon-selection-card" id="card-add-socialReels">
+                <input type="checkbox" id="add-socialReels" onchange="toggleCustomizerAddon('socialReels')">
                 <div class="addon-card-text">
-                  <h5><i data-lucide="usb"></i> USB Keepsake Box</h5>
-                  <p>Engraved wooden USB drive containing all negatives.</p>
+                  <h5><i data-lucide="instagram"></i> Instagram &amp; WhatsApp Reels</h5>
+                  <p>Fast-delivery vertical cinematic clips for social sharing.</p>
                 </div>
               </label>
 
-              <label class="addon-selection-card" id="card-add-galleryAccess">
-                <input type="checkbox" id="add-galleryAccess" onchange="toggleCustomizerAddon('galleryAccess')">
+              <label class="addon-selection-card" id="card-add-parentAlbum">
+                <input type="checkbox" id="add-parentAlbum" onchange="toggleCustomizerAddon('parentAlbum')">
                 <div class="addon-card-text">
-                  <h5><i data-lucide="globe"></i> 3-Year Cloud Portal</h5>
-                  <p>Cloud archive with easy high-res guest downloads.</p>
+                  <h5><i data-lucide="book-open"></i> Mini Parent Albums</h5>
+                  <p>Compact matching replica albums, perfect as parent gifts.</p>
                 </div>
               </label>
             </div>

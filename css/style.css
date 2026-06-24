@@ -19,7 +19,7 @@
   --gold-accent-dark: #a8853b;
   --gold-glow: rgba(207, 168, 83, 0.15);
   --silver-accent: #C0C0C0;
-  --platinum-accent: #8b7355;
+  --diamond-accent: #b9f2ff;
   
   /* Glassmorphic tokens */
   --glass-bg: rgba(9, 11, 17, 0.45);
@@ -1034,7 +1034,7 @@ section.flipped-prev {
 
 .package-accent-bar.silver { background: linear-gradient(90deg, transparent, #c0c0c0 50%, transparent); }
 .package-accent-bar.gold { background: linear-gradient(90deg, transparent, var(--gold-accent) 50%, transparent); }
-.package-accent-bar.platinum { background: linear-gradient(90deg, transparent, #a86c55 50%, transparent); }
+.package-accent-bar.diamond { background: linear-gradient(90deg, transparent, var(--diamond-accent) 50%, transparent); }
 
 .featured-pack {
   border-color: rgba(207, 168, 83, 0.3);
@@ -1112,9 +1112,9 @@ section.flipped-prev {
   margin-bottom: -0.18em;
 }
 
-.pack-price-platinum {
-  color: #df9b85;
-  text-shadow: 0 0 20px rgba(223, 155, 133, 0.2);
+.pack-price-diamond {
+  color: #b9f2ff;
+  text-shadow: 0 0 20px rgba(185, 242, 255, 0.35);
 }
 
 /* Customizable badge text */

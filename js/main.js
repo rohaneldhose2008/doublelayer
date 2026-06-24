@@ -796,31 +796,31 @@ document.addEventListener("DOMContentLoaded", () => {
     prewed: false,
     teaserReel: true,
     fullFilm: false,
-    usbKeepsake: true,
-    galleryAccess: true,
+    socialReels: true,
+    parentAlbum: true,
     editedPhotos: "100"
   };
 
   const defaultTemplates = {
     silver: {
-      candidPhotographers: 1,
+      candidPhotographers: 0,
       traditionalPhotographers: 1,
-      cinematographers: 0,
+      cinematographers: 1,
       traditionalVideographers: 0,
       albumsCount: 0,
-      framesCount: 0,
+      framesCount: 1,
       drone: false,
       ai: false,
       livestream: false,
       prewed: false,
       teaserReel: true,
       fullFilm: false,
-      usbKeepsake: false,
-      galleryAccess: true,
+      socialReels: true,
+      parentAlbum: false,
       editedPhotos: "30"
     },
     gold: {
-      candidPhotographers: 2,
+      candidPhotographers: 0,
       traditionalPhotographers: 1,
       cinematographers: 1,
       traditionalVideographers: 0,
@@ -831,26 +831,26 @@ document.addEventListener("DOMContentLoaded", () => {
       livestream: false,
       prewed: false,
       teaserReel: true,
-      fullFilm: false,
-      usbKeepsake: true,
-      galleryAccess: true,
+      fullFilm: true,
+      socialReels: true,
+      parentAlbum: true,
       editedPhotos: "100"
     },
-    platinum: {
-      candidPhotographers: 3,
+    diamond: {
+      candidPhotographers: 1,
       traditionalPhotographers: 1,
       cinematographers: 1,
       traditionalVideographers: 1,
-      albumsCount: 2,
+      albumsCount: 1,
       framesCount: 1,
       drone: true,
       ai: true,
       livestream: false,
-      prewed: false,
+      prewed: true,
       teaserReel: true,
       fullFilm: true,
-      usbKeepsake: true,
-      galleryAccess: true,
+      socialReels: true,
+      parentAlbum: true,
       editedPhotos: "unlimited"
     }
   };
@@ -870,7 +870,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Sync checkboxes
-    const addons = ['drone', 'ai', 'livestream', 'prewed', 'teaserReel', 'fullFilm', 'usbKeepsake', 'galleryAccess'];
+    const addons = ['drone', 'ai', 'livestream', 'prewed', 'teaserReel', 'fullFilm', 'socialReels', 'parentAlbum'];
     addons.forEach(addon => {
       const inputEl = document.getElementById(`add-${addon}`);
       const cardEl = document.getElementById(`card-add-${addon}`);
@@ -936,8 +936,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const items = {
         teaserReel: "3-Min Cinematic Teaser Reel",
         fullFilm: "Full documentary cut (2 hours)",
-        usbKeepsake: "Engraved wooden USB keepsake box",
-        galleryAccess: "3-Year Cloud Gallery Access"
+        socialReels: "Instagram & WhatsApp Reels",
+        parentAlbum: "Mini Parent Replica Album(s)"
       };
       for (const item in items) {
         if (customizerState[item]) {
@@ -1056,7 +1056,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tierLabels = {
       silver: "Silver Package (Essential)",
       gold: "Gold Package (Recommended)",
-      platinum: "Platinum Package (Luxury)",
+      diamond: "Diamond Package (Luxury)",
       custom: "Custom Bespoke Configuration"
     };
     tierName.textContent = tierLabels[serviceVal] || "Custom Package";
@@ -1103,8 +1103,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const delivItems = {
       teaserReel: "3-Min Cinematic Teaser Reel",
       fullFilm: "Full documentary film edit",
-      usbKeepsake: "Engraved wooden USB keepsake box",
-      galleryAccess: "3-Year Online Cloud Portal"
+      socialReels: "Instagram & WhatsApp Reels",
+      parentAlbum: "Mini Parent Replica Album(s)"
     };
     for (const key in delivItems) {
       if (customizerState[key]) {
@@ -1469,8 +1469,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const items = {
         teaserReel: "3-Min Teaser Reel",
         fullFilm: "Full Documentary cut edit",
-        usbKeepsake: "Engraved wooden USB keepsake box",
-        galleryAccess: "3-Year Cloud Gallery Access"
+        socialReels: "Instagram & WhatsApp Reels",
+        parentAlbum: "Mini Parent Album(s)"
       };
       for (const key in items) {
         if (customizerState[key]) {
