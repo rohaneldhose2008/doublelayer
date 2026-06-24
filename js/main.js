@@ -1302,6 +1302,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // --- 10b. CONTACT FORM SUBMISSION WITH WHATSAPP COMPILER ---
+  const simpleContactForm = document.getElementById("simple-contact-form");
+  const contactFormPanel = document.getElementById("contact-form-panel");
+
+  if (simpleContactForm && contactFormPanel) {
+    simpleContactForm.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const name = document.getElementById("contact-name").value.trim();
+      const email = document.getElementById("contact-email").value.trim();
+      const msg = document.getElementById("contact-msg").value.trim();
+
+      // Compile message for WhatsApp
+      let waText = `✨ DOUBLELAYER INQUIRY ✨\n\n`;
+      waText += `Name: ${name}\n`;
+      waText += `Email: ${email}\n\n`;
+      waText += `Message:\n${msg}`;
+
+      const waUrl = "https://wa.me/919446802570?text=" + encodeURIComponent(waText);
+
+      // Render success message inside the contact form panel
+      contactFormPanel.innerHTML = `
+        <div class="success-screen" style="text-align: center; padding: 20px 10px;">
+          <div class="success-icon" style="background: rgba(207, 168, 83, 0.1); color: var(--gold-accent); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" style="width:28px; height:28px;"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 class="text-gradient" style="font-size: 22px; margin-bottom: 10px; font-family: 'ADAM.CG PRO', sans-serif;">Message Compiled</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 20px; line-height: 1.6;">
+            Thank you, <span style="color:#fff; font-weight:600;">${name}</span>. We've compiled your inquiry and are redirecting you to WhatsApp to connect with us.
+          </p>
+          <a href="${waUrl}" target="_blank" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; padding: 10px 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square" style="width:16px; height:16px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Open WhatsApp & Send
+          </a>
+        </div>
+      `;
+
+      // Auto redirect after 1.5 seconds
+      setTimeout(() => {
+        window.open(waUrl, "_blank");
+      }, 1500);
+    });
+  }
+
   // --- 11. LEGAL POLICIES POPUPS ---
   const policyModal = document.getElementById("policy-modal");
   const policyTitle = document.getElementById("policy-title");
