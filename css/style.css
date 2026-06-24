@@ -554,7 +554,7 @@ section.flipped-prev {
   overflow: hidden;
   background-image: url('../images/hero_bg.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-color: #050609;
   pointer-events: none; /* prevents blocking click events on interactive content */
@@ -566,7 +566,7 @@ section.flipped-prev {
     /* If you place a portrait image named hero_bg_mobile.jpeg in the images/ folder, 
        it will load here automatically on mobile screens. Otherwise, it falls back to the centered desktop image. */
     background-image: url('../images/hero_bg_mobile.jpeg'), url('../images/hero_bg.jpeg');
-    background-position: center center;
+    background-position: top center;
   }
 }
 
